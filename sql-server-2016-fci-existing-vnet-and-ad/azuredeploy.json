@@ -42,7 +42,7 @@
       }
     },
     "joinOU": {
-      "type:"string",
+      "type":"string",
       "metadata": {
         "description": "FQDN to add resources to in Active Directory."
       }
