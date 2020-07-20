@@ -41,6 +41,12 @@
         "description": "DNS domain name for existing Active Directory domain."
       }
     },
+    "joinOU": {
+      "type:"string",
+      "metadata": {
+        "description": "FQDN to add resources to in Active Directory."
+      }
+    },
     "adminUsername": {
       "type": "string",
       "metadata": {
@@ -130,6 +136,9 @@
           },
           "domainName": {
             "value": "[parameters('existingDomainName')]"
+          },
+          "joinOU": {
+            "value": "[parameters('joinOU')]"
           },
           "adminUsername": {
             "value": "[parameters('adminUsername')]"
