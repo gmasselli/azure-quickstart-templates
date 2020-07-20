@@ -8,7 +8,10 @@ configuration PrepSFCI
     (
         [Parameter(Mandatory)]
         [String]$DomainName,
-
+        
+        [Parameter(Mandatory)]
+        [String]$JoinOU,
+        
         [Parameter(Mandatory)]
         [System.Management.Automation.PSCredential]$AdminCreds,
 
@@ -74,6 +77,7 @@ configuration PrepSFCI
         xComputer DomainJoin
         {
             Name = $env:COMPUTERNAME
+            JoinOU = $JoinOU
             DomainName = $DomainName
             Credential = $DomainCreds
             DependsOn = "[xWaitForADDomain]DscForestWait"
