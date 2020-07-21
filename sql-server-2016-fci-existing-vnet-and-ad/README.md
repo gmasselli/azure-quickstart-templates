@@ -21,6 +21,9 @@ Click the button below to deploy from the portal:
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMSBrett%2Fazure-quickstart-templates%Fpatch-1%2Fsql-server-2016-fci-existing-vnet-and-ad%2Fazuredeploy.json" target="_blank">
+    <img src="http://azuredeploy.net/deploybutton.png"/>
+</a>
 
 To deploy via the cli:
 ```bash
