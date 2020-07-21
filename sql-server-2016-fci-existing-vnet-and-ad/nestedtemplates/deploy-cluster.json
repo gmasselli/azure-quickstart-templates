@@ -16,6 +16,12 @@
         "description": "DNS domain name for existing Active Directory domain"
       }
     },
+    "joinOU": {
+      "type": "string",
+      "metadata": {
+        "description": "The FQDN to add the resources to"
+      }
+    },
     "adminUsername": {
       "type": "string",
       "metadata": {
@@ -340,6 +346,7 @@
           "configurationFunction": "[variables('sfciPrepFunction')]",
           "properties": {
             "domainName": "[parameters('domainName')]",
+            "joinOU": "[parameters('joinOU')]",
             "adminCreds": {
               "userName": "[parameters('adminUserName')]",
               "password": "PrivateSettingsRef:adminPassword"
@@ -379,6 +386,7 @@
           "configurationFunction": "[variables('sfciConfigFunction')]",
           "properties": {
             "domainName": "[parameters('domainName')]",
+            "joinOU": "[parameters('joinOU')]",
             "clusterName": "[variables('clusterName')]",
             "sqlClusterName": "[variables('sqlClusterName')]",
             "clusterIP": "[parameters('clusterIP')]",
